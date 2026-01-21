@@ -1,0 +1,13 @@
+{
+    "name": "curo-soft-tec",
+    "version": "1.0.8",
+    "description": "Curotech Website with Auth0 Backend",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "express-oauth2-jwt-bearer": "^1.6.0"
+    }
+}
