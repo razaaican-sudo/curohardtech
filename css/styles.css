@@ -1540,6 +1540,8 @@ a.btn {
         padding: 15px 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         font-size: 18px;
+        color: #ffffff !important;
+        /* Force White Text in Mobile Menu */
     }
 
     /* Fix Dropdown visibility in the new flow */
