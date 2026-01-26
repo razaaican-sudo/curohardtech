@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initCounterAnimation();
     initFAQAccordion();
     initBookDemoModal(); // Enable Book Demo Modal
+    initFormHandler(); // Enable AJAX Form Submission
     initSmoothScroll();
 });
 
@@ -275,3 +276,72 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+/**
+ * Handle Form Submissions via AJAX (No Redirect)
+ */
+function initFormHandler() {
+    const forms = document.querySelectorAll('form');
+
+    forms.forEach(form => {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // STOP the redirect
+
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+
+            // 1. Visual Feedback - Loading
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Sending...';
+
+            // 2. Prepare Data
+            const formData = new FormData(form);
+            const actionUrl = form.getAttribute('action'); // Get the FormSubmit URL from HTML
+
+            // 3. Send AJAX Request
+            fetch(actionUrl, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json' // Tells FormSubmit to return JSON, not redirect
+                },
+                body: formData
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // 4. Success UI
+                        showSuccessMessage(form);
+                    } else {
+                        // Error state
+                        alert("Oops! Something went wrong. Please check your internet or email configuration.");
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = originalBtnText;
+                    }
+                })
+                .catch(error => {
+                    console.error('Form Error:', error);
+                    alert("Network error. Please try again later.");
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = originalBtnText;
+                });
+        });
+    });
+}
+
+function showSuccessMessage(form) {
+    // specific handling for modal vs newsletter
+    const isModal = form.classList.contains('modal-form');
+
+    const successHTML = `
+        <div class="success-message">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 4L12 14.01l-3-3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>${isModal ? 'Request Received!' : 'Subscribed!'}</h3>
+            <p>${isModal ? 'We will be in touch with you shortly to schedule your demo.' : 'Thank you for joining our newsletter.'}</p>
+        </div>
+    `;
+
+    // Replace form content
+    form.innerHTML = successHTML;
+}
