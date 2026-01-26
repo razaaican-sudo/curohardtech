@@ -3,7 +3,7 @@ const app = express();
 const { auth } = require('express-oauth2-jwt-bearer');
 const path = require('path');
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8081;
 
 // Auth0 Configuration (from user request)
 const jwtCheck = auth({
