@@ -453,7 +453,8 @@ a.btn {
 .mobile-menu-toggle span {
     width: 25px;
     height: 3px;
-    background: var(--white);
+    background: var(--text-dark);
+    /* Contrast against white header */
     border-radius: 2px;
     transition: var(--transition);
 }
