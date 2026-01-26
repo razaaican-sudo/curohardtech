@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initTypewriter();
     initCounterAnimation();
     initFAQAccordion();
-    // initModal(); // Disabled popup as per user request
+    initBookDemoModal(); // Enable Book Demo Modal
     initSmoothScroll();
 });
 
@@ -183,36 +183,36 @@ function initFAQAccordion() {
 }
 
 /**
- * Modal Popup
+ * Book Demo Modal Logic
  */
-function initModal() {
-    const modal = document.getElementById('announcementModal');
-    const closeBtn = document.getElementById('closeModal');
+function initBookDemoModal() {
+    const modal = document.getElementById('bookDemoModal');
+    const closeBtn = document.getElementById('closeBookDemo');
+    const bookButtons = document.querySelectorAll('a.btn-primary'); // Targets all "Book Demo" buttons if they share this class
 
     if (!modal || !closeBtn) return;
 
-    // Show modal after 2 seconds
-    setTimeout(() => {
-        modal.classList.add('active');
-    }, 2000);
-
-    // Close modal on button click
-    closeBtn.addEventListener('click', () => {
-        modal.classList.remove('active');
+    // Open Modal on Button Click
+    bookButtons.forEach(btn => {
+        if (btn.textContent.trim().toLowerCase().includes('book demo')) {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('active');
+            });
+        }
     });
 
-    // Close modal on overlay click
+    // Close Modal Logic
+    const closeModal = () => modal.classList.remove('active');
+
+    closeBtn.addEventListener('click', closeModal);
+
     modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.remove('active');
-        }
+        if (e.target === modal) closeModal();
     });
 
-    // Close modal on Escape key
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            modal.classList.remove('active');
-        }
+        if (e.key === 'Escape') closeModal();
     });
 }
 

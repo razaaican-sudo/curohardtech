@@ -417,8 +417,11 @@
                 </div>
                 <div class="footer-section">
                     <h3 class="footer-title">Newsletter</h3>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                    <form class="newsletter-form" action="https://formsubmit.co/INSERT_YOUR_EMAIL" method="POST">
+                        <input type="hidden" name="_subject" value="New Newsletter Subscription!">
+                        <input type="hidden" name="_next" value="http://localhost:8081/index.html">
+                        <input type="email" name="email" placeholder="Enter your email" class="newsletter-input"
+                            required>
                         <button type="submit" class="btn btn-primary">Subscribe</button>
                     </form>
                 </div>
@@ -446,6 +449,42 @@
             </div>
         </div>
     </footer>
+
+    <!-- Book Demo Modal -->
+    <div class="modal-overlay" id="bookDemoModal">
+        <div class="modal-container">
+            <button class="modal-close" id="closeBookDemo">&times;</button>
+            <div class="modal-header">
+                <h3>Book a <span class="highlight">Demo</span></h3>
+                <p>Experience the future of robotics education.</p>
+            </div>
+            <form class="modal-form" action="https://formsubmit.co/INSERT_YOUR_EMAIL" method="POST">
+                <input type="hidden" name="_subject" value="New Demo Booking Request!">
+                <input type="hidden" name="_next" value="http://localhost:8081/index.html">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" id="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" required placeholder="john@school.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone" id="phone" required placeholder="+91 98765 43210">
+                </div>
+                <div class="form-group">
+                    <label for="school">School / Organization</label>
+                    <input type="text" name="school" id="school" placeholder="St. Mary's High School">
+                </div>
+                <!-- <div class="form-group">
+                    <label for="message">Message (Optional)</label>
+                    <textarea name="message" id="message" rows="3" placeholder="Tell us about your requirements..."></textarea>
+                </div> -->
+                <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Floating Elements -->
     <!-- Help Button Temporarily Disabled
