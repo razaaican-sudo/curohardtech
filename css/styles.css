@@ -1074,9 +1074,11 @@ a.btn {
 }
 
 /* ===== FAQ Section ===== */
+/* ===== FAQ Section ===== */
 .faq {
-    background: var(--light-gray);
+    background: var(--dark-bg);
     text-align: center;
+    padding: 100px 0;
 }
 
 .faq-container {
@@ -1086,11 +1088,13 @@ a.btn {
 }
 
 .faq-item {
-    background: var(--white);
+    background: var(--tech-panel);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     margin-bottom: 15px;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
+    transition: var(--transition);
 }
 
 .faq-question {
@@ -1102,9 +1106,11 @@ a.btn {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
+    /* Increased readability */
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--white);
+    /* High visibility */
     text-align: left;
     transition: var(--transition);
 }
@@ -1135,7 +1141,8 @@ a.btn {
 
 .faq-answer p {
     padding: 0 30px 25px;
-    color: var(--gray);
+    color: var(--text-muted);
+    /* Better for dark mode */
     line-height: 1.8;
 }
 
