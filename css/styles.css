@@ -26,6 +26,7 @@
     --gradient-primary: linear-gradient(135deg, #FF9A76 0%, #FFB094 100%);
     --gradient-tech: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
     --gradient-metallic: linear-gradient(180deg, #F1F5F9 0%, #E2E8F0 100%);
+    --gradient-dark: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
 
     --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.2);
     --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -350,8 +351,15 @@ a.btn {
 
 .nav-link {
     color: var(--text-dark);
-    font-size: 16px;
-    font-weight: 600;
+    font-family: var(--font-main);
+    /* Tech font */
+    font-size: 19px;
+    /* Increased size */
+    font-weight: 700;
+    /* Bolder */
+    text-transform: uppercase;
+    /* Cleaner look */
+    letter-spacing: 0.5px;
     position: relative;
     padding: 5px 0;
     transition: var(--transition);

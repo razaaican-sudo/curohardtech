@@ -11,6 +11,14 @@
     overflow: hidden;
 }
 
+.about-hero {
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('../images/drone-three.jpg') no-repeat center center/cover;
+}
+
+.gallery-hero {
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('../images/gallery-2.jpg') no-repeat center center/cover;
+}
+
 .page-hero::before {
     content: '';
     position: absolute;
