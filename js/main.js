@@ -22,13 +22,10 @@ function initTypewriter() {
     if (!textElement) return;
 
     const phrases = [
-        "Robotics Training",
-        "STEM Education",
-        "AR VR",
-        "AI and IoT",
-        "Programming languages",
-        "Machine learning",
-        "Drone Making and Flying"
+        "Robotics Solutions",
+        "AI Labs",
+        "STEM Curriculum",
+        "Drone Workshops"
     ];
 
     let phraseIndex = 0;
