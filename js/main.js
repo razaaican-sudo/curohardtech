@@ -189,18 +189,16 @@ function initFAQAccordion() {
 function initBookDemoModal() {
     const modal = document.getElementById('bookDemoModal');
     const closeBtn = document.getElementById('closeBookDemo');
-    const bookButtons = document.querySelectorAll('a.btn-primary'); // Targets all "Book Demo" buttons if they share this class
+    const bookButtons = document.querySelectorAll('.js-open-demo-modal');
 
     if (!modal || !closeBtn) return;
 
     // Open Modal on Button Click
     bookButtons.forEach(btn => {
-        if (btn.textContent.trim().toLowerCase().includes('book demo')) {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                modal.classList.add('active');
-            });
-        }
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.add('active');
+        });
     });
 
     // Close Modal Logic

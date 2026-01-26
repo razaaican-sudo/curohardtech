@@ -39,7 +39,7 @@
                 <li><a href="pages/contact.html" class="nav-link">Contact Us</a></li>
             </ul>
             <div class="nav-buttons">
-                <a href="#" class="btn btn-primary">Book Demo</a>
+                <a href="#" class="btn btn-primary js-open-demo-modal">Book Demo</a>
 
 
                 <!-- <a href="pages/login.html" class="btn btn-secondary">Login</a> -->
@@ -241,7 +241,7 @@
                     A revolutionary Coding, AI, and Robotics solution for schools! Our educational specialists are here
                     to show you how to harness the potential of this cutting-edge technology.
                 </p>
-                <a href="#" class="btn btn-primary btn-large">Schedule a Demo</a>
+                <a href="#" class="btn btn-primary btn-large js-open-demo-modal">Schedule a Demo</a>
             </div>
         </div>
     </section>
@@ -388,6 +388,20 @@
                 <div class="form-group">
                     <label for="school">School / Organization</label>
                     <input type="text" name="school" id="school" placeholder="St. Mary's High School">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" name="date" id="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="mode">Demo Mode</label>
+                        <select name="mode" id="mode">
+                            <option value="Online">Online</option>
+                            <option value="School Visit">School Visit</option>
+                            <option value="Office Visit">Office Visit</option>
+                        </select>
+                    </div>
                 </div>
                 <!-- <div class="form-group">
                     <label for="message">Message (Optional)</label>

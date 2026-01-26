@@ -2005,6 +2005,15 @@ a.btn {
     transition: all 0.3s ease;
 }
 
+.modal-form .form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.modal-form .form-row .form-group {
+    flex: 1;
+}
+
 .modal-form .btn-primary::after {
     content: '';
     position: absolute;
