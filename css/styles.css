@@ -2158,22 +2158,24 @@ a.btn {
 }
 
 /* Contact Form Container */
+/* Contact Form Container */
 .contact-form-container {
-    background: #ffffff;
+    background: var(--tech-panel);
     padding: 40px;
     border-radius: 16px;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .contact-form h3 {
     font-family: var(--font-main);
     font-size: 1.6rem;
-    color: #1e293b;
+    color: var(--white);
     margin-bottom: 10px;
 }
 
 .contact-form>p {
-    color: #64748b;
+    color: var(--text-muted);
     margin-bottom: 25px;
 }
 
@@ -2185,7 +2187,7 @@ a.btn {
     display: block;
     font-family: var(--font-main);
     font-weight: 600;
-    color: #334155;
+    color: var(--text-light);
     margin-bottom: 8px;
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -2193,15 +2195,16 @@ a.btn {
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
     width: 100%;
     padding: 14px 18px;
-    border: 2px solid #e2e8f0;
+    border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     font-family: var(--font-body);
     font-size: 1rem;
-    color: #1e293b;
-    background: #fff;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
 }
 
