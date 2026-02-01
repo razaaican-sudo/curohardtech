@@ -4,174 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Bharat Robotics LAB Robotics Kits - Premium STEM kits for all ages.">
+    <meta name="description" content="Explore Bharat Robotics LAB Robotics Kits - Hands-on learning for the future.">
     <title>Robotics Kits | Bharat Robotics LAB</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/pages.css">
     <style>
-        .robotics-hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('../images/banner1.png');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .kit-section {
-            padding: 80px 0;
-        }
-
-        .kit-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .kit-card {
-            background: var(--white);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition);
-            border: 1px solid rgba(0, 0, 0, 0.05);
+        .pdf-container {
+            width: 100%;
+            height: 90vh;
+            margin-top: 80px;
+            /* Offset for fixed header */
+            background: #f4f7fa;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        .kit-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .kit-image {
-            height: 250px;
-            overflow: hidden;
-            background: #f8fafc;
-        }
-
-        .kit-image img {
+        iframe {
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            padding: 20px;
-            transition: var(--transition);
+            border: none;
         }
 
-        .kit-card:hover .kit-image img {
-            transform: scale(1.05);
-        }
-
-        .kit-content {
-            padding: 30px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .kit-badge {
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-            background: rgba(255, 145, 77, 0.1);
-            color: var(--primary-color);
-        }
-
-        .kit-title {
-            font-size: 24px;
-            font-weight: 800;
-            color: var(--dark-bg);
-            margin-bottom: 15px;
-            font-family: var(--font-main);
-        }
-
-        .kit-features {
-            list-style: none;
-            margin-bottom: 25px;
-        }
-
-        .kit-features li {
-            font-size: 15px;
-            color: var(--gray);
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .kit-features li::before {
-            content: '✓';
-            color: var(--primary-color);
-            font-weight: 900;
-        }
-
-        .specs-section {
-            background: var(--dark-bg);
-            color: var(--white);
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .specs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .spec-item {
+        .no-pdf {
             text-align: center;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .spec-icon {
-            font-size: 40px;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .spec-title {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-        }
-
-        .resource-card {
-            background: var(--gradient-primary);
             padding: 50px;
-            border-radius: 30px;
-            text-align: center;
-            color: var(--white);
-            margin-top: 80px;
-        }
-
-        .btn-white {
-            background: var(--white);
-            color: var(--primary-color);
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 25px;
-            transition: var(--transition);
-        }
-
-        .btn-white:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -210,124 +71,16 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="page-hero robotics-hero">
-        <div class="container">
-            <span class="section-badge">ADVANCED ROBOTICS</span>
-            <h1 class="page-title">Next-Generation <span class="highlight">Robotics Kits</span></h1>
-            <p class="page-subtitle">Empowering the creators of tomorrow with modular, high-precision robotics hardware
-                designed for education and innovation.</p>
-        </div>
-    </section>
-
-    <!-- Kits Grid -->
-    <section class="kit-section">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-badge">OUR CATALOG</span>
-                <h2 class="section-title">Explore Our <span class="highlight">Robotics Solutions</span></h2>
-                <p class="section-description">From foundation to competition, we provide the right tools for every
-                    learning stage.</p>
+    <!-- PDF Viewer Section -->
+    <main class="pdf-container">
+        <iframe src="../programs_content/robotics.pdf" title="Robotics Kits Catalog">
+            <div class="no-pdf">
+                <p>It appears your browser doesn't support embedded PDFs.
+                    <a href="../programs_content/robotics.pdf" target="_blank">Click here to view the PDF directly.</a>
+                </p>
             </div>
-
-            <div class="kit-grid">
-                <!-- Starter Kit -->
-                <div class="kit-card">
-                    <div class="kit-image">
-                        <img src="../images/robotics_starter.png" alt="STEM Starter Kit">
-                    </div>
-                    <div class="kit-content">
-                        <span class="kit-badge">Beginner (Ages 6-10)</span>
-                        <h3 class="kit-title">STEM Starter Kit</h3>
-                        <ul class="kit-features">
-                            <li>Plug-and-play components</li>
-                            <li>Graphical block-based coding</li>
-                            <li>Durable, child-safe materials</li>
-                            <li>Guided project manual</li>
-                        </ul>
-                        <a href="contact.html" class="btn btn-primary">Enquire Now</a>
-                    </div>
-                </div>
-
-                <!-- Advanced Kit -->
-                <div class="kit-card">
-                    <div class="kit-image">
-                        <img src="../images/robotics_advanced.png" alt="Engineering Kit">
-                    </div>
-                    <div class="kit-content">
-                        <span class="kit-badge">Intermediate (Ages 11-15)</span>
-                        <h3 class="kit-title">Advanced Engineering Kit</h3>
-                        <ul class="kit-features">
-                            <li>Arduino & Python compatible</li>
-                            <li>Precision metal components</li>
-                            <li>Advanced sensor integration</li>
-                            <li>IoT & Wireless capabilities</li>
-                        </ul>
-                        <a href="contact.html" class="btn btn-primary">Enquire Now</a>
-                    </div>
-                </div>
-
-                <!-- Competition Kit -->
-                <div class="kit-card">
-                    <div class="kit-image">
-                        <img src="../images/robotics_competition.png" alt="Pro Competition Kit">
-                    </div>
-                    <div class="kit-content">
-                        <span class="kit-badge">Expert (Ages 16+)</span>
-                        <h3 class="kit-title">Pro Competition Kit</h3>
-                        <ul class="kit-features">
-                            <li>High-speed processing unit</li>
-                            <li>Omni-directional movement</li>
-                            <li>AI vision & gyro stability</li>
-                            <li>Industry-grade prototyping</li>
-                        </ul>
-                        <a href="contact.html" class="btn btn-primary">Enquire Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technical Specs -->
-    <section class="specs-section">
-        <div class="container">
-            <div class="text-center">
-                <span class="section-badge" style="color: var(--white); border-color: rgba(255,255,255,0.3);">TECH
-                    SPECS</span>
-                <h2 class="section-title white">Why Choose Our <span class="highlight">Hardware?</span></h2>
-            </div>
-
-            <div class="specs-grid">
-                <div class="spec-item">
-                    <span class="spec-icon">🛡️</span>
-                    <h4 class="spec-title">Industrial Grade</h4>
-                    <p>Built with anodized aluminum and high-density polymers for long-term lab use.</p>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-icon">🔌</span>
-                    <h4 class="spec-title">Universal Compatibility</h4>
-                    <p>Connect seamlessly with Arduino, Raspberry Pi, and standard STEM controllers.</p>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-icon">🛠️</span>
-                    <h4 class="spec-title">Modular Design</h4>
-                    <p>Easily swap sensors, motors, and structural parts for endless configurations.</p>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-icon">📚</span>
-                    <h4 class="spec-title">Curriculum Aligned</h4>
-                    <p>Every kit comes with NEP 2020 aligned lesson plans and teacher guides.</p>
-                </div>
-            </div>
-
-            <!-- Download PDF Resource -->
-            <div class="resource-card">
-                <h3>Want the Full Technical Catalog?</h3>
-                <p>Download our comprehensive PDF guide for detailed part lists and specifications.</p>
-                <a href="../programs_content/robotics.pdf" target="_blank" class="btn-white">Download PDF Catalog</a>
-            </div>
-        </div>
-    </section>
+        </iframe>
+    </main>
 
     <!-- Footer -->
     <footer class="footer curopenta-footer">
