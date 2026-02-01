@@ -22,8 +22,8 @@
     --text-dark: #0F172A;
     /* For light backgrounds */
     --white: #ffffff;
-    --glass-header: rgba(255, 255, 255, 0.85);
-    /* Light Glass */
+    --glass-header: #ffffff;
+    /* Pure white to match logo */
     --border-color: rgba(255, 255, 255, 0.1);
 
     --gradient-primary: linear-gradient(135deg, #FF9A76 0%, #FFB094 100%);
@@ -167,9 +167,8 @@ img {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: var(--glass-header);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     transition: var(--transition);
 }
 
@@ -380,7 +379,7 @@ a.btn {
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 /* Removed underline ::after styles */
@@ -400,7 +399,8 @@ a.btn {
     top: 100%;
     left: 0;
     min-width: 200px;
-    background: var(--white);
+    background: var(--tech-panel);
+    /* Dark background */
     border-radius: 8px;
     box-shadow: var(--shadow-lg);
     opacity: 0;
@@ -409,7 +409,8 @@ a.btn {
     transition: var(--transition);
     padding: 10px 0;
     margin-top: 15px;
-    /* Visual gap */
+    border: 1px solid var(--border-color);
+    /* Add border for definition */
 }
 
 /* Invisible bridge to prevent hover loss */
@@ -436,12 +437,14 @@ a.btn {
 .dropdown-menu li a {
     display: block;
     padding: 10px 20px;
-    color: var(--text-color);
+    color: var(--text-light);
+    /* White text */
     font-size: 14px;
 }
 
 .dropdown-menu li a:hover {
-    background: var(--light-gray);
+    background: rgba(255, 255, 255, 0.1);
+    /* Subtle lighter hover */
     color: var(--primary-color);
 }
 
@@ -799,7 +802,7 @@ a.btn {
 /* ===== How We Do This Section ===== */
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 30px;
     margin-top: 50px;
 }

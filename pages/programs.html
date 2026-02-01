@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs | Bharat Robotics LAB</title>
     <meta name="description"
-        content="Bharat Robotics Lab Learning - School education made comfortable with our LMS platform.">
-    <title>Learning | Curotech</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        content="Explore Bharat Robotics LAB's comprehensive STEM education programs including impact initiatives, school solutions, learning platforms, and events.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/pages.css">
+    <link rel="icon" type="image/png" href="../images/logo.png">
 </head>
 
 <body>
-    <!-- Header/Navigation -->
+    <!-- Header -->
     <header class="header" id="header">
         <nav class="nav-container">
             <a href="../index.html" class="logo">
@@ -32,7 +32,7 @@
                         <!-- <li><a href="drone.html">Drones</a></li> -->
                         <li><a href="impact.html">Impact</a></li>
                         <li><a href="school.html">Our Program</a></li>
-                        <li><a href="learning.html" class="active">Learning</a></li>
+                        <li><a href="learning.html">Learning</a></li>
                         <li><a href="event.html">Event</a></li>
                     </ul>
                 </li>
@@ -41,9 +41,6 @@
             </ul>
             <div class="nav-buttons">
                 <a href="#" class="btn btn-primary js-open-demo-modal">Book Demo</a>
-
-
-                <!-- <a href="login.html" class="btn btn-secondary">Login</a> -->
             </div>
             <button class="mobile-menu-toggle" id="mobileMenuToggle">
                 <span></span>
@@ -53,100 +50,112 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="page-hero learning-page-hero">
+    <!-- Page Hero -->
+    <section class="page-hero programs-hero">
         <div class="container">
-            <span class="section-badge">Bharat Robotics Lab LMS</span>
-            <h1 class="page-title">Making Education More <span class="highlight">Engaging and Effective</span></h1>
-            <p class="page-subtitle">With Bharat Robotics Lab LMS platform your student can now learn from anywhere,
-                anytime and
-                on any device. Our platform is designed to provide a seamless learning experience, ensuring that
-                students can access their courses and materials with ease.</p>
+            <span class="section-badge">OUR PROGRAMS</span>
+            <h1 class="page-title">Comprehensive <span class="highlight">STEM Education</span> Programs</h1>
+            <p class="page-subtitle">Empowering students with 21st century skills through innovative robotics, AI, and
+                coding education aligned with NEP 2020.</p>
         </div>
     </section>
 
-    <!-- World-Class Content Section -->
+    <!-- Programs Overview -->
     <section class="section">
         <div class="container">
-            <div class="two-col-grid">
-                <div class="col-content">
-                    <span class="section-badge">WORLD-CLASS CONTENT</span>
-                    <h2 class="section-title">World-Class <span class="highlight">Content</span></h2>
-                    <p class="section-description">From a world-class content curated by Bharat Robotics Lab experts to
-                        a
-                        progressive grade-wise curriculum, session-wise planners, and lesson plans for teachers – it's
-                        all at your fingertips.</p>
-                    <ul class="feature-list">
-                        <li>Curriculum development for national education standards</li>
-                        <li>Teacher training and certification programs</li>
-                        <li>Infrastructure development for STEM labs</li>
-                    </ul>
+            <span class="section-badge">EXPLORE</span>
+            <h2 class="section-title text-center">Our <span class="highlight">Program Offerings</span></h2>
+            <p class="section-description text-center">Discover our range of educational programs designed to prepare
+                students for the future.</p>
+
+            <div class="programs-grid">
+                <!-- Impact Card -->
+                <div class="program-card">
+                    <div class="program-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <h3 class="highlight">Our Impact</h3>
+                    <p class="program-desc" style="color: black !important;">Advancing technology education for future
+                        generations with 150K+ students trained across 500+ schools.</p>
+                    <a href="impact.html" class="btn btn-primary btn-small">Learn More</a>
                 </div>
-                <div class="col-image">
-                    <img src="../images/world_class_content.png" alt="World-Class Content" class="section-img">
+
+                <!-- School Program Card -->
+                <div class="program-card">
+                    <div class="program-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z" />
+                            <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" />
+                        </svg>
+                    </div>
+                    <h3 class="highlight">Our Program</h3>
+                    <p class="program-desc" style="color: black !important;">End-to-end STEM solutions for 21st century
+                        institutes with our patented CIC methodology.</p>
+                    <a href="school.html" class="btn btn-primary btn-small">Explore</a>
+                </div>
+
+                <!-- Learning Platform Card -->
+                <div class="program-card">
+                    <div class="program-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                    </div>
+                    <h3 class="highlight">Learning Platform</h3>
+                    <p class="program-desc" style="color: black !important;">World-class LMS making education engaging
+                        and effective, accessible anytime, anywhere.</p>
+                    <a href="learning.html" class="btn btn-primary btn-small">Discover</a>
+                </div>
+
+                <!-- Events Card -->
+                <div class="program-card">
+                    <div class="program-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                            <line x1="16" y1="2" x2="16" y2="6" />
+                            <line x1="8" y1="2" x2="8" y2="6" />
+                            <line x1="3" y1="10" x2="21" y2="10" />
+                        </svg>
+                    </div>
+                    <h3 class="highlight">Events & Workshops</h3>
+                    <p class="program-desc" style="color: black !important;">Robotics competitions, AI workshops, and
+                        hands-on learning experiences for students.</p>
+                    <a href="event.html" class="btn btn-primary btn-small">View Events</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Streamlined Coding Section -->
+    <!-- Key Features Section -->
     <section class="section dark-section">
         <div class="container">
-            <span class="section-badge">CODING EDUCATION</span>
-            <h2 class="section-title white text-center">Streamlined <span class="highlight">Coding Education</span></h2>
-            <p class="section-description text-center white-text">Integrated coding platform and code files for
-                teachers, hands-on coding education becomes seamless.</p>
-
+            <span class="section-badge">WHY CHOOSE US</span>
+            <h2 class="section-title white text-center">Key <span class="highlight">Features</span></h2>
             <div class="labs-grid">
                 <div class="lab-card">
-                    <h3 class="lab-title">Coding Languages and Tools for Teachers</h3>
-                    <p class="lab-desc">JavaScript, Python, C++, Java, C# and Scratch programming languages with
-                        integrated code files for easy lesson planning.</p>
-                    <div class="language-tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">C++</span>
-                        <span class="tag">Java</span>
-                        <span class="tag">C#</span>
-                        <span class="tag">Scratch</span>
-                    </div>
+                    <h3 class="lab-title">NEP 2020 Aligned</h3>
+                    <p class="lab-desc">Our curriculum is designed in accordance with the National Education Policy
+                        2020, ensuring students receive relevant and future-ready education.</p>
                 </div>
                 <div class="lab-card">
-                    <h3 class="lab-title">State-of-the-Art Equipment</h3>
-                    <p class="lab-desc">Labs equipped with 3D printers, IoT devices, robotics kits, and measurement
-                        tools to support advanced prototyping.</p>
+                    <h3 class="lab-title">Hands-On Learning</h3>
+                    <p class="lab-desc">Students learn by doing with our robotics kits, coding platforms, and AI labs,
+                        making concepts tangible and memorable.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LMS Features Section -->
-    <section class="section">
-        <div class="container">
-            <span class="section-badge">LMS FEATURES</span>
-            <h2 class="section-title text-center">Bharat Robotics Lab <span class="highlight">End-to-End School
-                    Solution</span>
-            </h2>
-            <div class="features-showcase">
-                <div class="feature-item">
-                    <div class="feature-number">01</div>
-                    <h3 class="feature-title">Learn Anywhere</h3>
-                    <p class="feature-desc">Access courses from any device - desktop, tablet, or mobile</p>
+                <div class="lab-card">
+                    <h3 class="lab-title">Expert Educators</h3>
+                    <p class="lab-desc">Our certified trainers bring industry experience and pedagogical expertise to
+                        deliver engaging and effective instruction.</p>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-number">02</div>
-                    <h3 class="feature-title">Progress Tracking</h3>
-                    <p class="feature-desc">Real-time analytics and progress reports for students and teachers</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-number">03</div>
-                    <h3 class="feature-title">Interactive Content</h3>
-                    <p class="feature-desc">Engaging multimedia content with quizzes and assessments</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-number">04</div>
-                    <h3 class="feature-title">Teacher Dashboard</h3>
-                    <p class="feature-desc">Comprehensive tools for lesson planning and student management</p>
+                <div class="lab-card">
+                    <h3 class="lab-title">Complete Solutions</h3>
+                    <p class="lab-desc">From curriculum design to lab setup to teacher training, we provide end-to-end
+                        support for schools.</p>
                 </div>
             </div>
         </div>
@@ -155,14 +164,13 @@
     <!-- CTA Section -->
     <section class="section cta-section">
         <div class="container text-center">
-            <h2 class="section-title white">Ready to Transform Your <span class="highlight">Classroom?</span></h2>
-            <p class="section-description white-text">join a future-ready LMS built to transform teaching and learning.
-            </p>
+            <h2 class="section-title white">Ready to Transform Your <span class="highlight">Institution</span>?</h2>
+            <p class="section-description white-text">Partner with Bharat Robotics LAB to bring world-class STEM
+                education to your students.</p>
             <a href="contact.html" class="btn btn-primary btn-large">Get Started Today</a>
         </div>
     </section>
 
-    <!-- Footer -->
     <!-- Footer (Curopenta Style) -->
     <footer class="footer curopenta-footer">
         <div class="container">

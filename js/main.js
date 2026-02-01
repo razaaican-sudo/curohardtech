@@ -154,7 +154,8 @@ function initCounterAnimation() {
         });
     }, { threshold: 0.5 });
 
-    const statsSection = document.querySelector('.statistics');
+    // Observe either .statistics (index) or .impact-stats (impact page)
+    const statsSection = document.querySelector('.statistics') || document.querySelector('.impact-stats');
     if (statsSection) {
         observer.observe(statsSection);
     }
